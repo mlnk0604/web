@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Roboto', sans-serif;
+			
+		}
+		body{
+			background-color: #F0F1F5;
+		}
+		
+		.header1{
+			width: 100%;
+			height: 50px;
+			margin-bottom: 10px;
+		}
+		.header1 a{
+			text-decoration: none;
+		}
+		.header-box1{
+			padding: 3px;
+			width: 65px;
+			height: 25px;
+			margin-left: 20px;
+			margin-top: 20px;
+			text-align: center;
+			background-color: #2E3954;
+			font-size: 13px;
+			float: left;
+			color: #8D90A0;
+		}
+		.header-box1:hover{
+			background-color: #1B3C8C;
+			color: #fff;
+		}
+		.header-box2{
+			width: 60px;
+			height: 25px;
+			margin-right: 20px;
+			margin-top: 20px;
+			background-color: #2E3954;
+			font-size: 13px;
+			float: right;
+			color: #8D90A0;
+			text-align: center;
+			padding: 3px;
+		}
+		.header-box2:hover{
+			background-color: #1B3C8C;
+			color: #fff;
+		}
+		.header2{
+			width: 100%;
+			height: 70px;
+			background-color: #fff;
+			padding: 5px;
+			margin-bottom: 30px;
+		}
+		.logo{
+			width: 255px;
+			height: 40px;
+			margin-left: 60px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			float: left;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center center;
+		}
+		.logo img{
+			border: 0;
+		}
+		.menu{
+			background-color: #fff;
+			position:absolute;
+			z-index: 1;
+			float: right;
+/*			height: auto;*/
+			overflow: hidden;
+			margin-left: 850px;
+			font-weight: 600;
+		}
+		.menu li{
+			background-color: #fff;
+			width: 150px;
+			margin-top: 10px;
+			float: left;
+			text-align: center;
+			line-height: 30px;
+			list-style: none;
+		}
+		.menu a{
+			background-color: #fff;
+			text-decoration: none;
+			color: #000;
+		}
+		.submenu li{
+			background-color: #fff;
+			line-height: 30px;
+			list-style: none;
+		}
+		.submenu{
+			background-color: #fff;
+			height: 0;
+			overflow: hidden;
+		}
+		.submenu a{
+			background-color: #fff;
+			text-decoration: none;
+		}
+		.menu li:hover{
+			transition-duration: 0.5s;
+		}
+		.menu li:hover .submenu{
+			height: auto;
+			transition-duration: 1s;
+		}
+		.menu a:visited{
+			color: #000;
+		}
+		.menu a:hover{
+			color: #1B3C8C;
+			font-weight: bold;
+		}
+		.menu a:active{
+			color: #000;
+		}
+
+		.mid-wrap{
+			width: 100%;
+			height: 100%
+			margin-top: 20px;
+			position: relative;
+		}
+		.mid-menu{
+			width: 752px;
+			height: 150px;
+			float: left;
+			background-color: #fff;
+			margin-bottom: 20px;
+			margin-left: 50px;
+			text-align: center;
+
+		}
+		.mid-menu-box{
+			width: 120px;
+			height: 120px;
+			background-color: #1B3C8C;
+			float: left;
+			margin: 15px;
+			margin-left: 45px;
+			padding-top: 10px;
+		}
+		.mid-menu-logo{
+			padding: -10px;
+			width: 70px;
+			height: 70px;
+			background-color: #1B3C8C;
+		}
+		
+		/*footer*/
+		.footer{
+			background-color: #2E3954;
+			margin-top: 200px;
+			float: left;
+			width: 100%;
+		}
+		.footer-text1{
+			color: #8D90A0;
+			float: left;
+			margin-left: 100px; 
+			margin-top: 20px;
+			margin-bottom: 5px;
+		}
+		.footer-text2{
+			color: #8D90A0;
+			float: left; 
+			margin-left: 100px;
+			margin-bottom: 5px;
+		}
+		.footer-text3{
+			color: #8D90A0;
+			float: left;
+			margin-left: 100px;
+			margin-bottom: 20px;
+		}
+		.footer p{
+			float: left;
+			margin-left: 10px;  
+		}
+		.footer-logo{
+			float: left;
+			margin-left: 200px;
+			margin-top: 20px;
+		}
+
+		.login-wrap{
+			margin-top: 120px;
+			margin-left: auto;
+			margin-right: auto;
+			height: 500px;
+			background-color: #fff;
+			width: 50%;
+		}
+		.menu-wrap{
+			float: left;
+			margin-left: 280px;
+			margin-top: 100px;
+		}
+		.login-menu{
+			text-align: center;
+			width: 100px;
+			height: 70px;
+			background-color: #254EB0;
+			margin-bottom: 15px;
+		}
+		.login-menu:hover{
+			background-color: #2E3954;
+		}
+		.login-menu p{
+			padding-top: 17px;
+			color: #fff;
+			font-size: 15px;
+			font-weight: 600;
+		}
+		.input{
+			/*text-align: center;*/
+
+			width: 250px;
+			float: left;
+			height: 150px;
+			margin-left: 50px;
+			margin-top: 150px;
+		}
+		.id{
+			padding-left: 5px;
+			float: left;
+			font-size: 15px;
+			width: 250px;
+			height: 40px;
+			border: 1px solid black;
+			margin-bottom: 10px;
+		}
+		.pw{
+			font-size: 15px;
+			padding-left: 5px;
+			float: left;
+			width: 250px;
+			height: 40px;
+			border: 1px solid black;
+		}
+		.checkbox{
+			float: left;
+			margin-left: 15px;
+			margin-top: 10px;
+			margin-bottom: 30px;
+		}
+		.login-btn{
+			float: left;
+			width: 250px;
+			height: 40px;
+			border: none;
+			background-color: #1B3C8C;
+			font-size: 18px;
+			font-weight: bold;
+			color: #fff;
+		}
+		.login-btn:hover{
+			background-color: #2E3954;
+		}
+	</style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>한국공학대학교</title>
+</head>
+<body>
+	<div id="wrap">
+		<div class="header1">
+			<div class="header-box1">입학공지</div>
+			<div class="header-box1">주요공지</div>
+			<div class="header-box1">웹 메일</div>
+			<div class="header-box1">코로나19</div>
+			<div class="header-box2">학번조회</div>
+			<a class="header-box2" href="login.html">로그인</a>
+			<div class="header-box2">English</div>
+			<div class="header-box2">Chinese</div>
+		</div>
+
+		<div class="header2">
+			<a href="index.html"><img class="logo" src="https://i.postimg.cc/rs7Ytmvm/header-logo-01-03.gif"></a>
+				<ul class="menu">
+					<li>
+				        <a href="#">대학소개</a>
+				        <ul class="submenu">
+				        	<li><a href="#">TUKOREA 소개</a></li>
+				            <li><a href="#">총장실</a></li>
+							<li><a href="#">대학규정</a></li>
+						 	<li><a href="#">대학기구</a></li>
+							<li><a href="#">학교법인</a></li>
+							<li><a href="#">예결산공고</a></li>
+							<li><a href="#">등록금심의위원회</a></li>
+							<li><a href="#">대학평의원회</a></li>
+							<li><a href="#">정보공개</a></li>
+							<li><a href="#">클린행정</a></li>
+							<li><a href="#">캠퍼스안내</a></li>
+							<li><a href="#">법령상위원회</a></li>
+						</ul>
+					</li>
+
+					<li>
+						<a href="#">입학</a>
+						<ul class="submenu">
+							<li><a href="#">학부입시</a></li>
+							<li><a href="#">일반대학원</a></li>
+							<li><a href="#">지에대학원</a></li>
+							<li><a href="#">산경대학원</a></li>
+						</ul>
+					</li>
+
+					<li>
+						<a href="#">대학/대학원</a>
+						<ul class="submenu">
+							<li><a href="#">대학</a></li>
+							<li><a href="#">미래대학</a></li>
+					        <li><a href="#">기업인재대학</a></li>
+					        <li><a href="#">일반대학원</a></li>
+					        <li><a href="#">지식기반기술에너지대학원</a></li>
+					        <li><a href="#">산업기술·경영대학원</a></li>
+					        <li><a href="#">명교수 명예의전당</a></li>
+					    </ul>
+					</li>
+
+					<li>
+						<a href="#">학사정보</a>
+						<ul class="submenu">
+							<li><a href="#">학사정보</a></li>
+							<li><a href="#">장학금 안내</a></li>
+						</ul>
+					</li>
+
+					<li>
+						<a href="#">커뮤니티</a>
+						<ul class="submenu">
+							<li><a href="#">알림마당</li>
+							<li><a href="#">TUKOREA 광장</li>
+							<li><a href="#">Q&A</a></li>
+							<li><a href="#">FAQ</a></li>
+							<li><a href="#">클럽</a></li>
+							<li><a href="#">TUKOREA 설문조사</a></li>
+							<li><a href="#">학부모님 의견</a></li>
+							<li><a href="#">식당 및 편의시설</a></li>
+							<li><a href="#">주간식단안내</a></li>
+						</ul>
+					</li>
+
+					<li>
+						<a href="#">TUKROEA 홍보관</a>
+						<ul class="submenu">
+							<li><a href="#">TUKOREA Issue</a></li>
+							<li><a href="#">언론속의 TUKOREA</a></li>
+							<li><a href="#">홍보동영상</a></li>
+							<li><a href="#">동영상게시판</a></li>
+							<li><a href="#">캠퍼스갤러리</a></li>
+							<li><a href="#">캠퍼스맵</a></li>
+							<li><a href="#">캠퍼스VR투어</a></li>
+							<li><a href="#">TUKOREA UI</a></li>
+						</ul>
+					</li>
+				</ul>
+		</div>
+
+		<div class="login-wrap">
+			<div class="menu-wrap">
+				<div class="login-menu">
+					<p>아이디<br> 로그인</p>
+				</div>
+				<div class="login-menu">
+					<p>인증서 <br>로그인</p>
+				</div>
+				<div class="login-menu">
+					<p>기업일반회원 로그인</p>
+				</div>
+			</div>
+
+			<div class="input">
+				<div class="id">id</div>
+				<div class="pw">pw</div>
+				<label class="checkbox"><input type="checkbox" name="id 저장">아이디 저장</label>
+				<button type="button" class="login-btn">로그인</button>
+			</div>
+		</div>
+
+		<div class="footer">
+			<img class="footer-logo" src="https://i.postimg.cc/0QnzQKKY/logo-new.png">
+			<div class="footer-text1">
+				<p>개인정보처리방침</p>
+				<p>개인정보 목적외 이용제공대장</p>
+				<p>정보보호실천수칙</p>
+				<p>정보공개</p>
+				<p>대학정보공시</p>
+				<p>원격지원</p>
+			</div>
+			<div class="footer-text2">
+				<p>15073 경기도 시흥시 산기대학로 237 (정왕동) 한국공학대학교</p>
+				<p>대표전화 031-8041-1000</p>
+				<p>입학안내 1588-2036</p>
+			</div>
+				<div class="footer-text3">
+				<p>COPYRIGHT 2014 TECH UNIVERSITY OF KOREA. ALL RIGHTS RESERVED.webmaster@tukorea.ac.kr</p>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>
